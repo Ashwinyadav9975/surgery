@@ -1,0 +1,2745 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <!-- Mirrored from html.designingmedia.com/medwell/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 Jan 2025 05:40:17 GMT -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="../../use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <title>
+      Surgery Costing: Empowering Patients with Comprehensive Surgery
+      Comparisons
+    </title>
+    <link rel="icon" href="assets/images/fav-icon.png" />
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/css/aos.css" />
+    <link rel="stylesheet" href="assets/css/superclasses.css" />
+    <link rel="stylesheet" href="assets/css/custom.css" />
+    <link rel="stylesheet" href="assets/css/mobile.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Base styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+      }
+
+      body.no-scroll {
+        overflow: hidden;
+      }
+
+      /* Toast Container */
+      #toastContainer {
+        position: fixed;
+        bottom: 16px;
+        right: 16px;
+        z-index: 50;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      /* Popup Overlay */
+      .popup-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 999999999999999999;
+        padding: 16px;
+      }
+
+      .popup-overlay.active {
+        display: flex;
+      }
+
+      /* Main Modal Container */
+      .modal-container {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        max-width: 39rem;
+        width: 100%;
+        display: flex;
+      }
+
+      /* Left Side Section */
+      .left-section {
+        display: none;
+        width: 25%;
+        background-color: rgb(41, 55, 123);
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        padding: 16px;
+        color: white;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .left-section .title {
+        font-weight: bold;
+        font-size: 18px;
+        text-align: center;
+      }
+
+      .left-section .share-text {
+        margin-bottom: 16px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+        margin-top: 16px;
+      }
+
+      .share-button {
+        background: white;
+        color: #374151;
+        padding: 8px 16px;
+        border-radius: 6px;
+        font-weight: 500;
+        border: none;
+        cursor: pointer;
+      }
+
+      .share-button:hover {
+        background: #f3f4f6;
+      }
+
+      /* Right Side Section */
+      .right-section {
+        width: 100%;
+        padding: 20px;
+        position: relative;
+      }
+
+      .close-button {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        color: #6b7280;
+        font-size: 24px;
+        font-weight: bold;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+
+      .close-button:hover {
+        color: #1f2937;
+      }
+
+      /* Modal Content */
+      .modal-title {
+        font-size: 36px;
+        text-align: center;
+        font-weight: bold;
+        color: #111827;
+      }
+
+      .modal-title .free {
+        color: #ff594d;
+      }
+
+      .subtitle {
+        text-align: center;
+        color: #4b5563;
+        font-weight: bold;
+        margin-top: 16px;
+      }
+
+      .description {
+        color: #4b5563;
+        margin-top: 16px;
+      }
+
+      .description .italic {
+        font-style: italic;
+      }
+
+      .help-text {
+        color: #4b5563;
+        font-weight: bold;
+        margin-top: 16px;
+      }
+
+      /* Button Group */
+      .button-group {
+        margin-top: 24px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 16px;
+      }
+
+      .expand-button {
+        background: #ff594d;
+        color: rgb(255, 255, 255);
+        padding: 12px 24px;
+        border-radius: 6px;
+        font-weight: bold;
+        text-decoration: none;
+        text-align: center;
+      }
+
+      .expand-button:hover {
+        background: #ec5a50;
+      }
+
+      .understand-button {
+        color: #111827;
+        font-weight: 600;
+        padding: 12px 24px;
+        border: 1px solid #d1d5db;
+        border-radius: 6px;
+        text-decoration: none;
+        text-align: center;
+      }
+
+      .understand-button:hover {
+        color: #2e2b2b;
+      }
+
+      .understand-button:hover {
+        background: #f9fafb;
+        text-decoration: underline;
+      }
+
+      /* Mobile Share Button */
+      .mobile-share {
+        margin-top: 16px;
+        text-align: center;
+        display: block;
+      }
+
+      /* Terms Text */
+      .terms-text {
+        font-size: 14px;
+        color: #6b7280;
+        margin-top: 16px;
+      }
+
+      .terms-text a {
+        color: #ff594d;
+        text-decoration: underline;
+      }
+
+      /* Social Icons */
+      .social-icons {
+        display: flex;
+        margin-top: 24px;
+        gap: 16px;
+        color: #4b5563;
+        justify-content: center;
+      }
+
+      .social-icons a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .social-icons a:hover {
+        color: #111827;
+      }
+
+      /* Share Popup */
+      .share-popup {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1001;
+        display: none;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .share-popup.flex {
+        display: flex;
+      }
+
+      .share-content {
+        background: white;
+        border-radius: 12px;
+        max-width: 28rem;
+        width: calc(100% - 32px);
+        margin: 0 16px;
+        position: relative;
+      }
+
+      .share-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px;
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      .share-title {
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      .share-close {
+        color: #6b7280;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+
+      .share-close:hover {
+        color: #374151;
+      }
+
+      .share-options {
+        padding: 16px;
+      }
+
+      .share-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+
+      .share-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .share-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        transition: all 0.2s;
+      }
+
+      .share-icon.whatsapp {
+        background: #25d366;
+      }
+
+      .share-icon.facebook {
+        background: #1877f2;
+      }
+
+      .share-icon.instagram {
+        background: linear-gradient(
+          45deg,
+          #f09433,
+          #e6683c,
+          #dc2743,
+          #cc2366,
+          #bc1888
+        );
+      }
+
+      .share-icon.linkedin {
+        background: #0a66c2;
+      }
+
+      .share-icon.twitter {
+        background: #000000;
+      }
+
+      .share-icon.email {
+        background: #6b7280;
+      }
+
+      .share-label {
+        font-size: 12px;
+      }
+
+      .url-section {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px;
+        background: #f3f4f6;
+        border-radius: 8px;
+      }
+
+      .url-input {
+        flex: 1;
+        background: transparent;
+        border: none;
+        outline: none;
+        font-size: 14px;
+      }
+
+      .copy-button {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 16px;
+        background: #2563eb;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+
+      .copy-button:hover {
+        background: #1d4ed8;
+      }
+
+      /* Toast */
+      .toast {
+        position: fixed;
+        bottom: 16px;
+        right: 16px;
+        background: #1f2937;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: opacity 0.3s;
+        z-index: 1002;
+      }
+
+      /* Media Queries */
+      @media (min-width: 768px) {
+        .left-section {
+          display: flex;
+        }
+
+        .right-section {
+          width: 75%;
+        }
+
+        .button-group {
+          flex-direction: row;
+        }
+
+        .mobile-share {
+          display: none;
+        }
+
+        .modal-title {
+          font-size: 48px;
+        }
+
+        .share-grid {
+          grid-template-columns: repeat(6, 1fr);
+        }
+      }
+    </style>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .app-store-button {
+        margin-top: 50px;
+        display: inline-flex;
+        align-items: center;
+        background-color: #ff594d;
+        color: #fff;
+        padding: 0.75rem 1.5rem;
+        border-radius: 12px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        margin-right: 15px;
+        text-decoration: none;
+      }
+
+      .app-store-button:hover {
+        background-color: #ff4433;
+        transform: translateY(-2px);
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .app-store-button i {
+        font-size: 1.5rem;
+        margin-right: 0.75rem;
+        color: #fff;
+      }
+
+      .app-store-button span {
+        font-size: 1rem;
+        color: #fff;
+      }
+
+      /* Add space between buttons */
+      .app-store-button:last-child {
+        margin-right: 0;
+      }
+
+      .features-section {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .bg-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.1;
+        pointer-events: none;
+      }
+
+      .features-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .features-header {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .features-title {
+        color: rgb(41, 55, 123);
+        font-size: 42px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      .features-subtitle {
+        color: #555;
+        font-size: 18px;
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.6;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+      }
+
+      .feature-card {
+        background: white;
+        border-radius: 16px;
+        padding: 30px;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .feature-icon {
+        width: 50px;
+        height: 50px;
+        background: #e3f2fd;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+
+      .feature-number {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 14px;
+        color: rgb(41, 55, 123);
+        font-weight: bold;
+        background: #e3f2fd;
+        padding: 4px 12px;
+        border-radius: 20px;
+      }
+
+      .feature-title {
+        color: rgb(41, 55, 123);
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+
+      .feature-description {
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .feature-benefits {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+      }
+
+      .benefit-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        color: rgb(41, 55, 123);
+      }
+
+      .benefit-checkmark {
+        width: 18px;
+        height: 18px;
+        background: #ff594d;
+        border-radius: 50%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .benefit-checkmark::after {
+        content: "";
+        width: 6px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+        position: absolute;
+      }
+
+      @media (max-width: 992px) {
+        .features-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+
+    <style>
+      .benefits-section {
+        padding: 80px 0;
+        background-color: #ffffff;
+        font-family: "Arial", sans-serif;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .sub-heading {
+        color: #2563eb;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+      }
+
+      .main-heading {
+        font-size: 36px;
+        color: #1f2937;
+        margin-bottom: 20px;
+        font-weight: 700;
+      }
+
+      .header-description {
+        font-size: 18px;
+        color: #4b5563;
+        max-width: 670px;
+        margin: 0 auto;
+        line-height: 1.6;
+      }
+
+      .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 50px;
+      }
+
+      .benefit-card {
+        background: #f8fafc;
+        border-radius: 10px;
+        padding: 30px;
+        transition: transform 0.3s ease;
+        border: 1px solid #e5e7eb;
+      }
+
+      .benefit-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .benefit-title {
+        font-size: 20px;
+        color: #1f2937;
+        margin-bottom: 15px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+      }
+
+      .benefit-title::before {
+        content: "✅";
+        margin-right: 10px;
+      }
+
+      .benefit-description {
+        color: #4b5563;
+        line-height: 1.6;
+        font-size: 16px;
+      }
+
+      @media (max-width: 768px) {
+        .benefits-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .main-heading {
+          font-size: 28px;
+        }
+
+        .header-description {
+          font-size: 16px;
+          padding: 0 20px;
+        }
+      }
+    </style>
+
+    <style>
+      .newsletter-section {
+        background: linear-gradient(
+            rgba(41, 55, 123, 0.95),
+            rgba(41, 55, 123, 0.95)
+          ),
+          url("assets/images/dots-img.png");
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      }
+
+      .newsletter-inner {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .newsletter-section h2 {
+        color: #fff;
+        font-size: 36px;
+        margin-bottom: 15px;
+      }
+
+      .newsletter-section p {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 16px;
+        margin-bottom: 30px;
+      }
+
+      .newsletter-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        max-width: 450px;
+        margin: 0 auto;
+      }
+
+      .newsletter-form .form-group {
+        margin-bottom: 0;
+      }
+
+      .newsletter-form .form-control {
+        height: 50px;
+        border-radius: 25px;
+        border: none;
+        padding: 0 20px;
+        font-size: 15px;
+        background: rgba(255, 255, 255, 0.9);
+        transition: all 0.3s ease;
+      }
+
+      .newsletter-form .form-control:focus {
+        background: #fff;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .subscribe-btn {
+        height: 50px;
+        border-radius: 25px;
+        border: none;
+        background: #ff594d;
+        color: #fff;
+        font-weight: 600;
+        padding: 0 30px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .subscribe-btn:hover {
+        background: #ff4433;
+        transform: translateY(-2px);
+      }
+
+      .subscribe-btn i {
+        font-size: 14px;
+      }
+
+      @media (max-width: 576px) {
+        .newsletter-section h2 {
+          font-size: 28px;
+        }
+
+        .newsletter-form {
+          padding: 0 15px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Share Button Container -->
+
+    <style>
+      .sp2024-container {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 999999;
+      }
+
+      .sp2024-fab-btn {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: rgb(255 255 255 / 28%);
+        backdrop-filter: blur(4px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: rgb(0, 0, 0);
+        transition: all 0.3s ease;
+      }
+
+      .sp2024-fab-btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .sp2024-dropdown {
+        position: absolute;
+        bottom: 80px;
+        right: 0;
+        width: 300px;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+        padding: 20px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .sp2024-dropdown.sp2024-active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .sp2024-header {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        color: #333;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #eee;
+      }
+
+      .sp2024-url-input {
+        width: 100%;
+        padding: 8px 12px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        font-size: 14px;
+        color: rgb(6, 5, 5); /* Added red text color */
+      }
+
+      .sp2024-url-input:focus {
+        outline: none;
+        border-color: #2196f3;
+        box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.1);
+      }
+
+      .sp2024-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+      }
+
+      .sp2024-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 5px;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        text-decoration: none;
+        color: #333;
+      }
+
+      .sp2024-item i {
+        font-size: 24px;
+        margin-bottom: 8px;
+      }
+
+      .sp2024-item span {
+        font-size: 12px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+      }
+
+      /* Social Colors */
+      .sp2024-instagram {
+        color: #e4405f;
+      }
+      .sp2024-instagram:hover {
+        background: #e4405f15;
+      }
+      .sp2024-whatsapp {
+        color: #25d366;
+      }
+      .sp2024-whatsapp:hover {
+        background: #25d36615;
+      }
+      .sp2024-facebook {
+        color: #1877f2;
+      }
+      .sp2024-facebook:hover {
+        background: #1877f215;
+      }
+      .sp2024-twitter {
+        color: #1da1f2;
+      }
+      .sp2024-twitter:hover {
+        background: #1da1f215;
+      }
+      .sp2024-linkedin {
+        color: #0a66c2;
+      }
+      .sp2024-linkedin:hover {
+        background: #0a66c215;
+      }
+      .sp2024-pinterest {
+        color: #e60023;
+      }
+      .sp2024-pinterest:hover {
+        background: #e6002315;
+      }
+      .sp2024-reddit {
+        color: #ff4500;
+      }
+      .sp2024-reddit:hover {
+        background: #ff450015;
+      }
+      .sp2024-telegram {
+        color: #0088cc;
+      }
+      .sp2024-telegram:hover {
+        background: #0088cc15;
+      }
+      .sp2024-email {
+        color: #333333;
+      }
+      .sp2024-email:hover {
+        background: #33333315;
+      }
+      .sp2024-copy {
+        color: #6c757d;
+      }
+      .sp2024-copy:hover {
+        background: #6c757d15;
+      }
+
+      .sp2024-toast {
+        position: fixed;
+        bottom: 100px;
+        right: 30px;
+        background: #333;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 12px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        font-size: 14px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: all 0.3s ease;
+      }
+
+      .sp2024-toast.sp2024-active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 480px) {
+        .sp2024-dropdown {
+          width: 280px;
+          right: -10px;
+        }
+        .sp2024-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    </style>
+
+    <!-- Share Button Container -->
+    <div class="sp2024-container">
+      <div class="sp2024-fab-btn">
+        <i class="fas fa-share-alt"></i>
+      </div>
+
+      <div class="sp2024-dropdown">
+        <div class="sp2024-header">Share this link</div>
+        <input
+          type="text"
+          id="shareUrlInput"
+          class="sp2024-url-input"
+          readonly
+        />
+
+        <div class="sp2024-grid">
+          <a
+            href="#"
+            class="sp2024-item sp2024-instagram"
+            data-type="instagram"
+          >
+            <i class="fab fa-instagram"></i>
+            <span>Instagram</span>
+          </a>
+          <a href="#" class="sp2024-item sp2024-whatsapp" data-type="whatsapp">
+            <i class="fab fa-whatsapp"></i>
+            <span>WhatsApp</span>
+          </a>
+          <a href="#" class="sp2024-item sp2024-facebook" data-type="facebook">
+            <i class="fab fa-facebook"></i>
+            <span>Facebook</span>
+          </a>
+          <a href="#" class="sp2024-item sp2024-twitter" data-type="twitter">
+            <i class="fab fa-twitter"></i>
+            <span>Twitter</span>
+          </a>
+          <a href="#" class="sp2024-item sp2024-linkedin" data-type="linkedin">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a
+            href="#"
+            class="sp2024-item sp2024-pinterest"
+            data-type="pinterest"
+          >
+            <i class="fab fa-pinterest"></i>
+            <span>Pinterest</span>
+          </a>
+          <a href="#" class="sp2024-item sp2024-reddit" data-type="reddit">
+            <i class="fab fa-reddit"></i>
+            <span>Reddit</span>
+          </a>
+          <a href="#" class="sp2024-item sp2024-telegram" data-type="telegram">
+            <i class="fab fa-telegram"></i>
+            <span>Telegram</span>
+          </a>
+          <a href="#" class="sp2024-item sp2024-email" data-type="email">
+            <i class="fas fa-envelope"></i>
+            <span>Email</span>
+          </a>
+          <a href="#" class="sp2024-item sp2024-copy" data-type="copy">
+            <i class="fas fa-link"></i>
+            <span>Copy Link</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="sp2024-toast">Link copied to clipboard! 🎉</div>
+    </div>
+    <style>
+      .floating-button {
+        position: fixed;
+        bottom: 105px;
+        right: 35px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: rgb(255 255 255 / 28%);
+        backdrop-filter: blur(4px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        z-index: 1000;
+      }
+
+      .floating-button img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+    </style>
+
+    <div class="floating-button">
+      <a href="https://ashwin.org/donate.html" target="_blank">
+        <img src="/donate.svg" alt="Floating Button Image" />
+      </a>
+    </div>
+    <script>
+      (function () {
+        // Configuration object for share URLs
+        const ShareConfig = {
+          shareUrl: "https://surgerycosting.ashwin.org/", // Change this to your desired URL
+          title: "Check this out!", // Optional share title
+          description: "I found something interesting!", // Optional share description
+        };
+
+        const uniquePrefix = "sp2024";
+        const container = document.querySelector(`.${uniquePrefix}-container`);
+        const fabButton = container.querySelector(`.${uniquePrefix}-fab-btn`);
+        const dropdown = container.querySelector(`.${uniquePrefix}-dropdown`);
+        const toast = container.querySelector(`.${uniquePrefix}-toast`);
+        const shareUrlInput = document.querySelector("#shareUrlInput");
+
+        // Function to get share URL from config
+        const getShareUrl = () => ShareConfig.shareUrl;
+
+        // Initialize with config URL
+        shareUrlInput.value = getShareUrl();
+
+        // Toggle share menu
+        fabButton.addEventListener("click", (e) => {
+          e.stopPropagation();
+          dropdown.classList.toggle(`${uniquePrefix}-active`);
+          shareUrlInput.select();
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", (e) => {
+          if (!container.contains(e.target)) {
+            dropdown.classList.remove(`${uniquePrefix}-active`);
+          }
+        });
+
+        // Share handlers
+        dropdown.addEventListener("click", (e) => {
+          e.preventDefault();
+          const item = e.target.closest(`.${uniquePrefix}-item`);
+          if (!item) return;
+
+          const type = item.dataset.type;
+          const shareUrl = getShareUrl();
+          const title = encodeURIComponent(ShareConfig.title);
+          const description = encodeURIComponent(ShareConfig.description);
+          let shareLink = "";
+
+          switch (type) {
+            case "instagram":
+              shareLink = `instagram://share?text=${description}\n${encodeURIComponent(
+                shareUrl
+              )}`;
+              setTimeout(() => {
+                window.location.href = `https://instagram.com`;
+              }, 1000);
+              break;
+            case "whatsapp":
+              shareLink = `whatsapp://send?text=${description}\n${encodeURIComponent(
+                shareUrl
+              )}`;
+              break;
+            case "facebook":
+              shareLink = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+                shareUrl
+              )}`;
+              break;
+            case "twitter":
+              shareLink = `https://twitter.com/intent/tweet?url=${encodeURIComponent(
+                shareUrl
+              )}&text=${title}`;
+              break;
+            case "linkedin":
+              shareLink = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+                shareUrl
+              )}`;
+              break;
+            case "pinterest":
+              shareLink = `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(
+                shareUrl
+              )}&description=${description}`;
+              break;
+            case "reddit":
+              shareLink = `https://reddit.com/submit?url=${encodeURIComponent(
+                shareUrl
+              )}&title=${title}`;
+              break;
+            case "telegram":
+              shareLink = `https://t.me/share/url?url=${encodeURIComponent(
+                shareUrl
+              )}&text=${description}`;
+              break;
+            case "email":
+              shareLink = `mailto:?subject=${title}&body=${description}%0A%0A${encodeURIComponent(
+                shareUrl
+              )}`;
+              break;
+            case "copy":
+              navigator.clipboard.writeText(shareUrl).then(() => {
+                toast.classList.add(`${uniquePrefix}-active`);
+                setTimeout(() => {
+                  toast.classList.remove(`${uniquePrefix}-active`);
+                }, 2000);
+              });
+              return;
+          }
+
+          if (shareLink) {
+            window.open(shareLink, "_blank", "noopener,noreferrer");
+          }
+        });
+
+        // Function to update share URL
+        window.updateShareUrl = function (newUrl, newTitle, newDescription) {
+          ShareConfig.shareUrl = newUrl || ShareConfig.shareUrl;
+          ShareConfig.title = newTitle || ShareConfig.title;
+          ShareConfig.description = newDescription || ShareConfig.description;
+          shareUrlInput.value = ShareConfig.shareUrl;
+        };
+      })();
+    </script>
+
+    <div id="toastContainer"></div>
+
+    <div id="popupOverlay" class="popup-overlay">
+      <div class="modal-container">
+        <!-- Left Section -->
+        <div class="left-section">
+          <div class="title">From<br />ashwin.org</div>
+          <div>
+            <p class="share-text">Sharing Is Your Responsibility</p>
+            <button onclick="showSharePopup()" class="share-button">
+              Kindly Share
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-section">
+          <button id="closePopup" class="close-button">&times;</button>
+
+          <h1 class="modal-title"><span class="free">Free</span> Forever</h1>
+
+          <p class="subtitle">This Is a Gift For You</p>
+
+          <p
+            class="description"
+            style="line-height: 21px; height: 150px; overflow-y: auto"
+          >
+            All of our apps are non-profit initiatives created to serve all
+            people . These apps are completely free to use and will always
+            remain FREE FOREVER.<br />
+            <span class="italic"
+              >This invention app is fully ready , but we are currently facing a
+              shortage of funds to launch it. If you believe in this idea,and
+              the world will benefit from it, we kindly ask that you take the
+              responsibility of sharing it and supporting its financial growth
+              until it has completed its expansion only</span
+            ><br />
+            We have put in all our funds to bring more than 200 of your gifts to
+            this stage. Now, we need your support.
+          </p>
+
+          <p class="help-text">Help Us Help You!</p>
+
+          <div class="button-group">
+            <a href="#" class="expand-button">Expand</a>
+            <a href="#" class="understand-button" id="understandButton"
+              >I Understand</a
+            >
+          </div>
+
+          <div class="mobile-share">
+            <button onclick="showSharePopup()" class="share-button">
+              Kindly Share
+            </button>
+          </div>
+
+          <p class="terms-text">
+            By understanding, you are agreeing to our
+            <a href="https://ashwin.org/terms-condition.html" target="_blank"
+              >Terms and Conditions</a
+            >
+          </p>
+
+          <div class="social-icons">
+            <a
+              href="https://www.instagram.com/zacharityfeedfoundation/"
+              target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://www.youtube.com/@Zaashwin" target="_blank"
+              ><i class="fab fa-youtube"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/company/za-charity-feed-foundation"
+              target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="https://x.com/za_charity" target="_blank"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+            <a href="https://discord.gg/MpykSVCFuv" target="_blank"
+              ><i class="fab fa-discord"></i
+            ></a>
+            <a href="https://pin.it/3mt9Ogs58" target="_blank"
+              ><i class="fab fa-pinterest"></i
+            ></a>
+            <a href="https://www.reddit.com/r/ashwin_org/" target="_blank"
+              ><i class="fab fa-reddit"></i
+            ></a>
+            <a
+              href="https://www.quora.com/profile/Zeeshan-Ali-4965"
+              target="_blank"
+              ><i class="fab fa-quora"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Share Popup -->
+    <div id="youtubeSharePopup" class="share-popup">
+      <div class="share-content">
+        <div class="share-header">
+          <h3 class="share-title">Share</h3>
+          <button onclick="closeSharePopup()" class="share-close">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="share-options">
+          <div class="share-grid">
+            <a href="#" onclick="shareToWhatsApp()" class="share-item">
+              <div class="share-icon whatsapp">
+                <i class="fab fa-whatsapp text-2xl"></i>
+              </div>
+              <span class="share-label">WhatsApp</span>
+            </a>
+
+            <a href="#" onclick="shareToFacebook()" class="share-item">
+              <div class="share-icon facebook">
+                <i class="fab fa-facebook-f text-2xl"></i>
+              </div>
+              <span class="share-label">Facebook</span>
+            </a>
+            <a href="#" onclick="shareToInstagram()" class="share-item">
+              <div class="share-icon instagram">
+                <i class="fab fa-instagram text-2xl"></i>
+              </div>
+              <span class="share-label">Instagram</span>
+            </a>
+
+            <a href="#" onclick="shareToLinkedIn()" class="share-item">
+              <div class="share-icon linkedin">
+                <i class="fab fa-linkedin-in text-2xl"></i>
+              </div>
+              <span class="share-label">LinkedIn</span>
+            </a>
+
+            <a href="#" onclick="shareToX()" class="share-item">
+              <div class="share-icon twitter">
+                <i class="fa-brands fa-x-twitter text-xl"></i>
+              </div>
+              <span class="share-label">X</span>
+            </a>
+
+            <a href="#" onclick="shareToEmail()" class="share-item">
+              <div class="share-icon email">
+                <i class="far fa-envelope text-xl"></i>
+              </div>
+              <span class="share-label">Email</span>
+            </a>
+          </div>
+
+          <div class="url-section">
+            <input
+              type="text"
+              value="https://searchgainer.ashwin.org"
+              class="url-input"
+              readonly
+            />
+            <button onclick="copyLink()" class="copy-button">
+              <i class="far fa-copy"></i>
+              Copy
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Show modal on page load
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          document.getElementById("popupOverlay").classList.add("active");
+        }, 1000);
+      });
+
+      // Function to block background scroll
+      function blockScroll() {
+        // Store current scroll position
+        const scrollPosition =
+          window.pageYOffset || document.documentElement.scrollTop;
+        document.body.style.overflow = "hidden";
+        document.body.style.position = "fixed";
+        document.body.style.top = `-${scrollPosition}px`;
+        document.body.style.width = "100%";
+      }
+
+      // Function to unblock background scroll
+      function unblockScroll() {
+        // Get the scroll position from the body's top property
+        const scrollPosition = parseInt(document.body.style.top || "0");
+        document.body.style.overflow = "";
+        document.body.style.position = "";
+        document.body.style.top = "";
+        document.body.style.width = "";
+        // Restore scroll position
+        window.scrollTo(0, Math.abs(scrollPosition));
+      }
+
+      // Show modal on page load
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          document.getElementById("popupOverlay").classList.add("active");
+          blockScroll();
+        }, 1000);
+      });
+
+      // Close modal functions
+      document.getElementById("closePopup").addEventListener("click", () => {
+        document.getElementById("popupOverlay").classList.remove("active");
+        unblockScroll();
+      });
+
+      document
+        .getElementById("understandButton")
+        .addEventListener("click", (e) => {
+          e.preventDefault();
+          document.getElementById("popupOverlay").classList.remove("active");
+          unblockScroll();
+        });
+
+      document.getElementById("popupOverlay").addEventListener("click", (e) => {
+        if (e.target === document.getElementById("popupOverlay")) {
+          document.getElementById("popupOverlay").classList.remove("active");
+          unblockScroll();
+        }
+      });
+
+      // Share popup functions
+      function showSharePopup() {
+        document.getElementById("youtubeSharePopup").classList.remove("hidden");
+        document.getElementById("youtubeSharePopup").classList.add("flex");
+      }
+
+      function closeSharePopup() {
+        document.getElementById("youtubeSharePopup").classList.add("hidden");
+        document.getElementById("youtubeSharePopup").classList.remove("flex");
+      }
+
+      // Sharing functions
+      function copyLink() {
+        navigator.clipboard
+          .writeText("https://searchgainer.ashwin.org")
+          .then(() => {
+            showToast("Link copied to clipboard!");
+          });
+      }
+
+      function shareToWhatsApp() {
+        window.open(
+          `https://wa.me/?text=${encodeURIComponent(
+            "https://searchgainer.ashwin.org"
+          )}`,
+          "_blank"
+        );
+        closeSharePopup();
+      }
+
+      function shareToFacebook() {
+        window.open(
+          `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+            "https://searchgainer.ashwin.org"
+          )}`,
+          "_blank"
+        );
+        closeSharePopup();
+      }
+
+      function shareToInstagram() {
+        navigator.clipboard
+          .writeText("https://searchgainer.ashwin.org")
+          .then(() => {
+            showToast("Link copied! Open Instagram to share");
+          });
+        closeSharePopup();
+      }
+
+      function shareToLinkedIn() {
+        window.open(
+          `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+            "https://searchgainer.ashwin.org"
+          )}`,
+          "_blank"
+        );
+        closeSharePopup();
+      }
+
+      function shareToX() {
+        window.open(
+          `https://twitter.com/intent/tweet?url=${encodeURIComponent(
+            "https://searchgainer.ashwin.org"
+          )}`,
+          "_blank"
+        );
+        closeSharePopup();
+      }
+
+      function shareToEmail() {
+        window.location.href = `mailto:?body=${encodeURIComponent(
+          "https://searchgainer.ashwin.org"
+        )}`;
+        closeSharePopup();
+      }
+
+      // Toast notification
+      function showToast(message) {
+        const toast = document.createElement("div");
+        toast.className = "toast";
+        toast.textContent = message;
+        document.body.appendChild(toast);
+
+        setTimeout(() => {
+          toast.style.opacity = "0";
+          setTimeout(() => {
+            document.body.removeChild(toast);
+          }, 300);
+        }, 2000);
+      }
+
+      // Close share popup when clicking outside
+      document
+        .getElementById("youtubeSharePopup")
+        .addEventListener("click", (e) => {
+          if (e.target === document.getElementById("youtubeSharePopup")) {
+            closeSharePopup();
+          }
+        });
+
+      // Prevent closing when clicking inside the popup content
+      document
+        .querySelector("#youtubeSharePopup > div")
+        .addEventListener("click", (e) => {
+          e.stopPropagation();
+        });
+    </script>
+
+    <!-- Preloader -->
+    <div class="loader-mask">
+      <div class="loader">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <!-- Preloader -->
+    <!-- HEADER SECTION -->
+    <header class="w-100 float-left header-con">
+      <div class="wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light p-0">
+          <a class="navbar-brand" href="index.html">
+            <figure class="mb-0">
+              <img
+                src="assets/images/Logo.svg"
+                alt="logo"
+                style="height: 60px"
+              />
+            </figure>
+          </a>
+          <button
+            class="navbar-toggler collapsed"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link p-0" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-0" href="#about">Flow</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-0" href="#features">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-0" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-0" href="#benefits">Benefits</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-0" href="#donate">Donate</a>
+              </li>
+            </ul>
+            <div class="header-contact d-flex align-items-center">
+              <div class="search-field">
+                <a href="#">
+                  <img src="assets/images/search-icon.png" alt="search-icon" />
+                </a>
+              </div>
+              <div class="phone d-flex align-items-center">
+                <figure class="mb-0">
+                  <img
+                    src="assets/images/headphone-icon.png"
+                    alt="headphone-icon"
+                  />
+                </figure>
+                <div class="phone-txt">
+                  <span class="d-block">Call us at:</span>
+                  <a href="tel:+91 9082912903">+91 9175144873</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- HEADER SECTION -->
+    <!-- BANNER SECTION -->
+    <section class="w-100 float-left banner-con position-relative">
+      <div class="wrapper2">
+        <div class="banner-inner-box position-relative">
+          <div class="banner-inner-con">
+            <div class="banner-title">
+              <h2
+                data-aos="fade-up"
+                data-aos-duration="700"
+                style="color: aliceblue"
+              >
+                Take Control of Your
+                <span style="color: #ff594d; margin-top: 20px"
+                  >Surgery Costs</span
+                >
+                Today, from
+                <span style="color: #ff594d">Multiple</span> Hospitals.
+              </h2>
+              <h3
+                data-aos="fade-up"
+                data-aos-duration="700"
+                style="color: aliceblue; margin-top: 30px"
+              >
+                Personalized Surgery Quotes. Zero Hassle.
+              </h3>
+
+              <div
+                class="banner-btn d-flex align-items-center"
+                data-aos="fade-up"
+                data-aos-duration="700"
+              >
+                <a href="#" class="app-store-button">
+                  <i class="fab fa-apple"></i>
+                  <span>App Store</span>
+                </a>
+                <a href="#" class="app-store-button">
+                  <i class="fab fa-google-play"></i>
+                  <span>Google Play</span>
+                </a>
+              </div>
+            </div>
+            <div class="banner-details d-flex position-relative">
+              <figure class="mb-0">
+                <img
+                  src="/phone1.png"
+                  alt="img"
+                  style="height: 600px; object-fit: contain"
+                />
+              </figure>
+              <div class="banner-details-txt">
+                <p
+                  data-aos="fade-up"
+                  data-aos-duration="700"
+                  style="font-size: large"
+                >
+                  Get quotes from multiple hospitals and doctors. Compare
+                  prices. Choose the best care for your surgery needs. <br />Why
+                  settle for one opinion? Send your reports to multiple
+                  hospitals and compare costs for your surgery—quickly and
+                  securely. blend it both
+                </p>
+                <div class="banner-static-box">
+                  <ul class="mb-0 list-unstyled">
+                    <li
+                      class="d-flex align-items-center justify-content-center"
+                      data-aos="fade-up"
+                      data-aos-duration="700"
+                    >
+                      <figure
+                        class="mb-0 d-flex align-items-center justify-content-center"
+                      >
+                        <img
+                          src="assets/images/thumb-icon.png"
+                          alt="thumb-icon"
+                        />
+                      </figure>
+                      <div class="banner-static-txt">
+                        <div class="static-value">98%</div>
+                        <span class="d-block">Positive Reviews</span>
+                        <span class="d-block">From Our Clients</span>
+                      </div>
+                    </li>
+                    <li
+                      class="d-flex align-items-center justify-content-end"
+                      data-aos="fade-up"
+                      data-aos-duration="700"
+                    >
+                      <figure
+                        class="mb-0 d-flex align-items-center justify-content-center"
+                      >
+                        <img
+                          src="assets/images/experienced-icon.png"
+                          alt="experienced-icon"
+                        />
+                      </figure>
+                      <div class="banner-static-txt">
+                        <div class="static-value">38+</div>
+                        <span class="d-block">Experienced Doctors</span>
+                        <span class="d-block">Our Treatment Office</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- BANNER SECTION -->
+
+    <!--FLow Section(Steps)-->
+    <section
+      id="flow"
+      class="work-process-sec w-100 float-left padding-bottom padding-top"
+    >
+      <div class="container">
+        <div
+          class="generic-title text-center"
+          data-aos="fade-up"
+          data-aos-duration="700"
+        >
+          <span class="d-block sub-txt">Flow</span>
+          <h2 class="mb-0">See the Steps to save you time.</h2>
+        </div>
+        <div class="process-con">
+          <ul class="list-unstyled mb-0">
+            <li class="text-center" data-aos="fade-up" data-aos-duration="700">
+              <div class="process-img-box">
+                <figure>
+                  <img
+                    src="assets/images/process-img2.png"
+                    alt="process-img2"
+                  />
+                </figure>
+                <span>01</span>
+              </div>
+              <h4>Upload Your Medical Details</h4>
+              <p style="color: rgb(46, 43, 43); font-size: 15px">
+                Tired of explaining your condition over and over? Simply upload
+                your detailed reports, medical history, and surgery requirements
+                on the app. Your data is securely encrypted and shared only with
+                hospitals you select.
+              </p>
+              <div class="benefit-item">
+                <span class="checkmark"></span>
+                <span style="color: rgb(34, 33, 32)"
+                  >No repeated hospital visits.</span
+                ><br />
+                <span class="checkmark"></span>
+                <span style="color: rgb(34, 33, 32)"
+                  >No lengthy explanations.</span
+                >
+              </div>
+            </li>
+            <li class="text-center" data-aos="fade-up" data-aos-duration="700">
+              <div class="process-img-box">
+                <figure>
+                  <img
+                    src="assets/images/process-img1.png"
+                    alt="process-img1"
+                  />
+                </figure>
+                <span>01</span>
+              </div>
+              <h4>Select Hospitals and Doctors</h4>
+              <p style="color: rgb(46, 43, 43); font-size: 15px">
+                Choose the hospitals and doctors you want to receive quotes
+                from. Whether you’re looking for specialists, budget-friendly
+                hospitals, or top-rated surgeons—you’re in control.
+              </p>
+              <div class="benefit-item">
+                <span class="checkmark"></span>
+                <span style="color: rgb(34, 33, 32)">
+                  Select from multiple hospitals.</span
+                ><br />
+                <span class="checkmark"></span>
+                <span style="color: rgb(34, 33, 32)"
+                  >Send your request with just a few taps.</span
+                >
+              </div>
+            </li>
+
+            <li class="text-center" data-aos="fade-up" data-aos-duration="700">
+              <div class="process-img-box">
+                <figure>
+                  <img
+                    src="assets/images/process-img4.png"
+                    alt="process-img4"
+                  />
+                </figure>
+                <span>03</span>
+              </div>
+              <h4>Receive and Compare Surgery Quotes</h4>
+              <p style="color: rgb(46, 43, 43); font-size: 15px">
+                Get personalized, detailed surgery quotes from multiple
+                hospitals based on your exact medical needs. No hidden fees, no
+                surprises. Compare costs, services, and timelines to choose the
+                best option for your health and budget.
+              </p>
+              <div class="benefit-item">
+                <span class="checkmark"></span>
+                <span style="color: rgb(34, 33, 32)"
+                  >Compare prices side by side.</span
+                ><br />
+                <span class="checkmark"></span>
+                <span style="color: rgb(34, 33, 32)"
+                  >Save money and avoid overpaying.</span
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section-->
+    <section
+      id="features"
+      class="w-100 float-left relative service-con padding-top padding-bottom"
+      style="position: relative"
+    >
+      <!-- Background SVG Pattern -->
+      <svg
+        class="bg-pattern"
+        viewBox="0 0 100 100"
+        xmlns="http://www.w3.org/2000/svg"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -20;
+          opacity: 0.3;
+        "
+      >
+        <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+          <path
+            d="M 10 0 L 0 0 0 10"
+            fill="none"
+            stroke="#FF594D"
+            stroke-width="0.1"
+          />
+        </pattern>
+        <rect width="100%" height="100%" fill="url(#grid)" />
+      </svg>
+      <div
+        class="generic-title text-center"
+        data-aos="fade-up"
+        data-aos-duration="700"
+      >
+        <span class="d-block sub-txt">FEATURES</span>
+        <h2 class="mb-0">What Makes Surgery Costing Stand Out?</h2>
+        <p
+          data-aos="fade-up"
+          data-aos-duration="700"
+          style="
+            font-size: large;
+            margin: auto;
+            color: rgb(43, 39, 39);
+            line-height: 26px;
+          "
+        >
+          Surgery Costing is more than just an app—it’s your partner in making
+          informed healthcare decisions. Here’s what makes it the best choice
+          for patients seeking clarity, transparency, and control over their
+          surgery costs.
+        </p>
+      </div>
+      <div class="features-section">
+        <div class="features-container">
+          <div class="features-grid">
+            <!-- Compare Quotes Feature -->
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#FF594D">
+                  <path
+                    d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
+                  />
+                </svg>
+              </div>
+              <span class="feature-number" style="color: #ff594d">01</span>
+              <h3 class="feature-title">Compare Multiple Quotes</h3>
+              <p class="feature-description">
+                Stop relying on a single hospital's estimate! Request surgery
+                quotes from
+                <strong>multiple hospitals and doctors at once.</strong> Compare
+                costs, timelines, and services in one place.
+              </p>
+              <div class="feature-benefits">
+                <div class="benefit-item">
+                  <span class="benefit-checkmark"></span>
+                  No more guesswork
+                </div>
+                <div class="benefit-item">
+                  <span class="benefit-checkmark"></span>
+                  Better decisions
+                </div>
+              </div>
+            </div>
+
+            <!-- Security Feature -->
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#FF594D">
+                  <path
+                    d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
+                  />
+                </svg>
+              </div>
+              <span class="feature-number" style="color: #ff594d">02</span>
+              <h3 class="feature-title">Secure Medical Data</h3>
+              <p class="feature-description">
+                Your health data is sensitive, and we treat it that way. All
+                your uploaded reports and personal details are
+                <strong>securely encrypted</strong> and only shared with the
+                hospitals you choose.
+              </p>
+              <div class="feature-benefits">
+                <div class="benefit-item">
+                  <span class="benefit-checkmark"></span>
+                  Encrypted data
+                </div>
+                <div class="benefit-item">
+                  <span class="benefit-checkmark"></span>
+                  You control access
+                </div>
+              </div>
+            </div>
+
+            <!-- Personalized Surgery Estimates Feature -->
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#FF594D">
+                  <path
+                    d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm1 15h-2v-2h2zm2-6h-4V7h2v2h2z"
+                  />
+                </svg>
+              </div>
+              <span class="feature-number" style="color: #ff594d">03</span>
+              <h3 class="feature-title">Personalized Surgery Estimates</h3>
+              <p class="feature-description">
+                Unlike generic cost ranges, Surgery Costing provides
+                personalized quotes tailored to your exact medical condition.
+                Doctors review your reports and provide accurate, itemized
+                estimates for your specific surgery.
+              </p>
+              <div class="feature-benefits">
+                <div class="benefit-item">
+                  <span class="benefit-checkmark"></span>
+                  Get quotes based on your unique medical needs
+                </div>
+                <div class="benefit-item">
+                  <span class="benefit-checkmark"></span>
+                  No misleading "starting from" prices
+                </div>
+              </div>
+            </div>
+
+            <!-- Saves You Time and Effort Feature -->
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#FF594D">
+                  <path d="M11 5h2v14h-2zM4 11h14v2H4z" />
+                </svg>
+              </div>
+              <span class="feature-number" style="color: #ff594d">04</span>
+              <h3 class="feature-title">Saves You Time and Effort</h3>
+              <p class="feature-description">
+                No need to physically visit every hospital to get quotes.
+                Surgery Costing lets you do it all from the comfort of your
+                home.
+              </p>
+              <div class="feature-benefits">
+                <div class="benefit-item">
+                  <span class="benefit-checkmark"></span>
+                  Skip the waiting rooms
+                </div>
+                <div class="benefit-item">
+                  <span class="benefit-checkmark"></span>
+                  Get all the quotes you need in minutes
+                </div>
+              </div>
+            </div>
+
+            <!-- Find Affordable Care Feature -->
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#FF594D">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93V4.07C7.06 4.56 4 7.92 4 12c0 4.08 3.06 7.44 7 7.93zM13 4.07v15.86c3.94-.49 7-3.85 7-7.93 0-4.08-3.06-7.44-7-7.93z"
+                  />
+                </svg>
+              </div>
+              <span class="feature-number" style="color: #ff594d">05</span>
+              <h3 class="feature-title">
+                Find Affordable Care Without Compromising Quality
+              </h3>
+              <p class="feature-description">
+                Compare quotes from budget-friendly hospitals or top-rated
+                specialists—you get to choose based on what matters to you most:
+                cost, quality, or both.
+              </p>
+              <div class="feature-benefits">
+                <div class="benefit-item">
+                  <span class="benefit-checkmark"></span>
+                  Save money by avoiding overpriced surgeries
+                </div>
+                <div class="benefit-item">
+                  <span class="benefit-checkmark"></span>
+                  Access trusted hospitals and doctors
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section
+      id="about"
+      class="w-100 float-left about-con design-img padding-top padding-bottom position-relative"
+    >
+      <div class="wrapper3">
+        <div class="about-box" data-aos="fade-up" data-aos-duration="700">
+          <div class="about-box-img">
+            <div class="vedio-img position-relative">
+              <div class="vedio-sub-img">
+                <img
+                  class="thumb poster-con index1-poster"
+                  src="assets/images/about-img1.jpg"
+                  alt="vedio-img"
+                />
+                <img
+                  class="thumb poster-con index1-poster"
+                  src="assets/images/about-img2.jpg"
+                  alt="vedio-img"
+                />
+                <img
+                  class="thumb poster-con index1-poster"
+                  src="assets/images/about-img3.jpg"
+                  alt="vedio-img"
+                />
+              </div>
+              <div class="btn-outer">
+                <a href="javascript:void(0)" onclick="lightbox_open();">
+                  <div class="video-wrap">
+                    <img src="assets/images/play-icon.png" alt="play-icon" />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="about-box-title"
+            data-aos="fade-up"
+            data-aos-duration="700"
+          >
+            <span class="d-block sub-txt">About us</span>
+            <h2>Empowering Patients with Choice, Transparency, and Control</h2>
+            <p
+              data-aos="fade-up"
+              data-aos-duration="700"
+              style="
+                font-size: large;
+                margin: auto;
+                color: rgb(43, 39, 39);
+                line-height: 26px;
+              "
+            >
+              At <strong>Surgery Costing</strong>, we believe that
+              <strong>every patient deserves to know their options</strong
+              >—clearly, transparently, and without the stress of hidden fees or
+              confusing processes. When it comes to surgery planning, patients
+              often feel overwhelmed and in the dark about what their procedure
+              will actually cost. We’re here to change that.
+            </p>
+            <br />
+            <p
+              data-aos="fade-up"
+              data-aos-duration="700"
+              style="
+                font-size: large;
+                margin: auto;
+                color: rgb(43, 39, 39);
+                line-height: 26px;
+              "
+            >
+              With <strong>Surgery Costing</strong>, you can request
+              <strong
+                >personalized quotes from multiple hospitals and doctors</strong
+              >—so you can make
+              <strong>informed, confident decisions</strong> about your
+              healthcare. We take the guesswork out of surgery planning, giving
+              you <strong>, choice, and control</strong> over your healthcare
+              expenses. Whether you’re seeking
+              <strong>affordable care</strong> or
+              <strong>top specialists</strong>, we help you find the right
+              balance between <strong>cost and quality</strong> —all in one
+              secure, easy-to-use platform.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="light">
+        <a class="boxclose" id="boxclose" onclick="lightbox_close();"></a>
+        <iframe
+          src="https://www.youtube.com/embed/kNXMJBQ6oL4"
+          allowfullscreen=""
+        ></iframe>
+      </div>
+
+      <div id="fade1" onClick="lightbox_close();"></div>
+    </section>
+    <!-- ABOUT SECTION -->
+
+    <!--Benefits Section-->
+    <section
+      id="benefits"
+      class="medical-services-sec w-100 float-left padding-top padding-bottom"
+    >
+      <div class="container">
+        <div
+          class="generic-title text-center"
+          data-aos="fade-up"
+          data-aos-duration="700"
+        >
+          <span class="d-block sub-txt">Benefits</span>
+          <h2 class="mb-0">Benefits OF Surgery Costing to peoples</h2>
+          <p
+            data-aos="fade-up"
+            data-aos-duration="700"
+            style="
+              font-size: large;
+              margin: auto;
+              color: rgb(43, 39, 39);
+              line-height: 26px;
+            "
+          >
+            Empowering You to Make Better Health Decisions Here’s why Surgery
+            Costing is the best tool to help you plan your surgery with
+            confidence.
+          </p>
+        </div>
+
+        <div class="service-categories">
+          <div class="category-box" data-aos="fade-up" data-aos-duration="700">
+            <span class="feature-number" style="color: #ff594d">01</span>
+            <div class="category-details position-relative">
+              <h4>Transparent Surgery Costs — No Surprises</h4>
+              <p>
+                Know exactly what your surgery will cost before you commit.
+                Receive detailed, itemized quotes that break down the costs—no
+                hidden fees, no vague estimates, and no unexpected bills after
+                surgery.
+              </p>
+            </div>
+          </div>
+          <div class="category-box" data-aos="fade-up" data-aos-duration="700">
+            <span class="feature-number" style="color: #ff594d">02</span>
+            <div class="category-details d-flex position-relative">
+              <h4>Compare Multiple Hospitals and Doctors</h4>
+              <p>
+                Get quotes from multiple hospitals and doctors all in one place.
+                Stop wasting time with individual hospital visits. With Surgery
+                Costing, you can compare prices, services, and timelines to find
+                the best option for your surgery needs.
+              </p>
+            </div>
+          </div>
+          <div class="category-box" data-aos="fade-up" data-aos-duration="700">
+            <span class="feature-number" style="color: #ff594d">03</span>
+            <div class="category-details d-flex position-relative">
+              <h4>Personalized Quotes Based on Your Medical Reports</h4>
+              <p>
+                Nuis aute irure dolor in reprehenderit in voluta zesse cillum...
+              </p>
+            </div>
+          </div>
+          <div class="category-box" data-aos="fade-up" data-aos-duration="700">
+            <span class="feature-number" style="color: #ff594d">04</span>
+            <div class="category-details d-flex position-relative">
+              <h4>Saves Time and Effort</h4>
+              <p>
+                No more running from hospital to hospital for quotes. Upload
+                your reports and request quotes from multiple hospitals within
+                minutes—all from the comfort of your home. It’s fast, secure,
+                and hassle-free.
+              </p>
+            </div>
+          </div>
+          <div class="category-box" data-aos="fade-up" data-aos-duration="700">
+            <span class="feature-number" style="color: #ff594d">05</span>
+            <div class="category-details d-flex position-relative">
+              <h4>Affordable Care Without Compromising Quality</h4>
+              <p>
+                Find the right balance between cost and quality. By comparing
+                quotes from different hospitals, you can avoid overpaying and
+                find healthcare providers that fit your budget without
+                sacrificing care quality.
+              </p>
+            </div>
+          </div>
+          <div class="category-box" data-aos="fade-up" data-aos-duration="700">
+            <span class="feature-number" style="color: #ff594d">06</span>
+            <div class="category-details d-flex position-relative">
+              <h4>Full Control Over Your Health Choices</h4>
+              <p>
+                You decide who sees your medical reports. Choose which hospitals
+                and doctors you want to send your requests to. With Surgery
+                Costing, you’re in control of your healthcare journey.
+              </p>
+            </div>
+          </div>
+          <div class="category-box" data-aos="fade-up" data-aos-duration="700">
+            <span class="feature-number" style="color: #ff594d">07</span>
+            <div class="category-details d-flex position-relative">
+              <h4>Secure and Private Process</h4>
+              <p>
+                Your data stays safe with us. Your medical reports and personal
+                details are encrypted and protected. Only the hospitals and
+                doctors you choose will have access to your information.
+              </p>
+            </div>
+          </div>
+          <div class="category-box" data-aos="fade-up" data-aos-duration="700">
+            <span class="feature-number" style="color: #ff594d">08</span>
+            <div class="category-details d-flex position-relative">
+              <h4>Peace of Mind for You and Your Family</h4>
+              <p>
+                Make better decisions with clarity and confidence. With Surgery
+                Costing, you remove the guesswork from surgery planning. You’ll
+                know exactly where you stand financially, helping you reduce
+                stress and focus on your health and recovery.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Donate SECTION -->
+    <section id="donate" class="w-100 float-left contact-con position-relative">
+      <div class="dots-img position-relative">
+        <div
+          class="padding-top padding-bottom contact-inner-con position-relative"
+        >
+          <div class="container">
+            <div
+              class="contact-form"
+              data-aos="fade-up"
+              data-aos-duration="700"
+            >
+              <span class="sub-txt d-block">Donate Now</span>
+              <h2>Help Us Make Healthcare Affordable for All</h2>
+              <span
+                >Your donation can change lives. At Surgery Costing, we believe
+                every patient deserves access to affordable healthcare. Your
+                contribution helps us keep this platform free for patients and
+                supports those who need financial assistance for life-saving
+                surgeries.</span
+              ><br />
+              <br />
+
+              <span
+                ><i
+                  >Every donation counts. Together, we can make healthcare more
+                  transparent, accessible, and affordable.</i
+                ></span
+              ><br /><br />
+              <form class="form-box" method="post" id="contactpage">
+                <div
+                  class="submit-btn"
+                  data-aos="fade-up"
+                  data-aos-duration="700"
+                >
+                  <button type="submit" id="submit">
+                    Donate Now
+                    <figure class="mb-0">
+                      <img src="assets/images/top-arrow.png" alt="top-arrow" />
+                    </figure>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section
+      class="newsletter-section w-100 float-left padding-top padding-bottom"
+    >
+      <div class="container">
+        <div
+          class="newsletter-inner text-center"
+          data-aos="fade-up"
+          data-aos-duration="700"
+        >
+          <h2>Subscribe to Our Newsletter</h2>
+          <p>
+            Stay updated with the latest healthcare insights and Surgery Costing
+            features
+          </p>
+
+          <!-- Replace the existing form with Mautic form -->
+          <div
+            id="mauticform_wrapper_surgerycostingnewletter"
+            class="mauticform_wrapper"
+          >
+            <form
+              autocomplete="false"
+              role="form"
+              method="post"
+              action="https://subscribe.ashwin.org/form/submit?formId=20"
+              id="mauticform_surgerycostingnewletter"
+              data-mautic-form="surgerycostingnewletter"
+              enctype="multipart/form-data"
+            >
+              <div
+                class="mauticform-error"
+                id="mauticform_surgerycostingnewletter_error"
+              ></div>
+              <div
+                class="mauticform-message"
+                id="mauticform_surgerycostingnewletter_message"
+              ></div>
+              <div class="mauticform-innerform">
+                <div
+                  class="mauticform-page-wrapper mauticform-page-1"
+                  data-mautic-form-page="1"
+                >
+                  <div class="form-group">
+                    <input
+                      id="mauticform_input_surgerycostingnewletter_f_name"
+                      name="mauticform[f_name]"
+                      class="form-control"
+                      type="text"
+                      placeholder="Your Name"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      id="mauticform_input_surgerycostingnewletter_email"
+                      name="mauticform[email]"
+                      class="form-control"
+                      type="email"
+                      placeholder="Your Email Address"
+                      required
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    name="mauticform[submit]"
+                    id="mauticform_input_surgerycostingnewletter_submit"
+                    class="subscribe-btn"
+                  >
+                    Subscribe Now
+                    <i class="fas fa-paper-plane"></i>
+                  </button>
+                </div>
+              </div>
+
+              <input
+                type="hidden"
+                name="mauticform[formId]"
+                id="mauticform_surgerycostingnewletter_id"
+                value="20"
+              />
+              <input
+                type="hidden"
+                name="mauticform[return]"
+                id="mauticform_surgerycostingnewletter_return"
+                value=""
+              />
+              <input
+                type="hidden"
+                name="mauticform[formName]"
+                id="mauticform_surgerycostingnewletter_name"
+                value="surgerycostingnewletter"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <section class="footer-main-section w-100 float-left">
+      <div class="container">
+        <div class="footer-inner-con">
+          <div class="footer-box footer-logo-box">
+            <figure>
+              <img src="assets/images/footer-logo.png" alt="footer-logo" />
+            </figure>
+            <p>
+              Get quotes from multiple hospitals and doctors. Compare prices.
+              Choose the best care for your surgery needs. Why settle for one
+              opinion? Send your reports to multiple hospitals and compare costs
+              for your surgery—quickly and securely.
+            </p>
+          </div>
+          <div class="footer-box footer-pages-links">
+            <h4>Quick Links</h4>
+            <ul class="list-unstyled mb-0">
+              <li>
+                <i class="fas fa-angle-right"></i><a href="index.html">Home</a>
+              </li>
+              <li>
+                <i class="fas fa-angle-right"></i><a href="#flow">FLow</a>
+              </li>
+              <li>
+                <i class="fas fa-angle-right"></i
+                ><a href="#features">Features</a>
+              </li>
+              <li>
+                <i class="fas fa-angle-right"></i><a href="#about">About</a>
+              </li>
+              <li>
+                <i class="fas fa-angle-right"></i
+                ><a href="#benefits">Benefits</a>
+              </li>
+              <li>
+                <i class="fas fa-angle-right"></i><a href="#donate">Donate</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-box contact-details-box">
+            <h4>Contact Us</h4>
+            <ul class="list-unstyled mb-0">
+              <li>
+                <i class="fas fa-map-marker-alt"></i>Nallasopara East, Mumbai,
+                Maharashtra 400016
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i
+                ><a href="mailto:contact@searchengine.ashwinalis.org"
+                  >Mail Us</a
+                >
+              </li>
+              <li>
+                <i class="fas fa-headphones"></i
+                ><a href="https://wa.me/9082912903">9175144873</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-box footer-newsletter">
+            <h4>Subscribe to Newsletter</h4>
+            <ul class="list-unstyled">
+              <li>
+                <input type="email" placeholder="Enter Your Email Address:" />
+                <button type="submit">
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </li>
+            </ul>
+            <div class="social-links">
+              <ul class="list-unstyled mb-0 d-flex">
+                <li
+                  class="d-flex justify-content-center align-items-center mb-0"
+                >
+                  <a href="https://www.facebook.com/login/"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                </li>
+                <li
+                  class="d-flex justify-content-center align-items-center mb-0"
+                >
+                  <a
+                    href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                </li>
+                <li
+                  class="d-flex justify-content-center align-items-center mb-0"
+                >
+                  <a href="https://www.linkedin.com/login"
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="copyright-con w-100 float-left text-center">
+      <p class="mb-0">
+        <img
+          src="/assets/images/svg (1).svg"
+          style="height: 24px; width: 24px"
+        />
+        by <a href="https://ashwin.org/">ashwin.org</a>, © Copyright 2025, All
+        Rights Reserved.
+      </p>
+    </div>
+
+    <a id="button"></a>
+    <!-- FOOTER SECTION -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.carousel.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/jquery.validate.js"></script>
+    <script src="assets/js/contact-form.js"></script>
+    <script>
+      $(window).on("load", function () {
+        // Preloader
+        $(".loader").fadeOut();
+        $(".loader-mask").delay(350).fadeOut("slow");
+      });
+    </script>
+    <script>
+      var btn = $("#button");
+
+      $(window).scroll(function () {
+        if ($(window).scrollTop() > 300) {
+          btn.addClass("show");
+        } else {
+          btn.removeClass("show");
+        }
+      });
+      btn.on("click", function (e) {
+        e.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, "300");
+      });
+    </script>
+    <script>
+      AOS.init();
+    </script>
+    <script>
+      $("#owl-carouselone").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        autoplay: true,
+        autoplayTimeout: 10000,
+        autoplayHoverPause: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 1,
+          },
+          1000: {
+            items: 3,
+          },
+        },
+      });
+      $("#owl-carouseltwo").owlCarousel({
+        loop: true,
+        margin: 30,
+        nav: true,
+        autoplay: true,
+        autoplayTimeout: 10000,
+        autoplayHoverPause: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 2,
+          },
+          1000: {
+            items: 3,
+          },
+        },
+      });
+    </script>
+    <script>
+      AOS.init();
+      function lightbox_open() {
+        var lightBoxVideo = document.getElementById("VisaChipCardVideo");
+        //   window.scrollTo(0, 0);
+        document.getElementById("light").style.display = "block";
+        document.getElementById("fade1").style.display = "block";
+        lightBoxVideo.play();
+      }
+
+      function lightbox_close() {
+        var lightBoxVideo = document.getElementById("VisaChipCardVideo");
+        document.getElementById("light").style.display = "none";
+        document.getElementById("fade1").style.display = "none";
+        lightBoxVideo.pause();
+      }
+    </script>
+    <script>
+      $(document).ready(function () {
+        var counters = $(".count");
+        var countersQuantity = counters.length;
+        var counter = [];
+
+        for (i = 0; i < countersQuantity; i++) {
+          counter[i] = parseInt(counters[i].innerHTML);
+        }
+
+        var count = function (start, value, id) {
+          var localStart = start;
+          setInterval(function () {
+            if (localStart < value) {
+              localStart++;
+              counters[id].innerHTML = localStart;
+            }
+          }, 40);
+        };
+
+        for (j = 0; j < countersQuantity; j++) {
+          count(0, counter[j], j);
+        }
+      });
+
+      $(".count").each(function () {
+        $(this)
+          .prop("Counter", 0)
+          .animate(
+            {
+              Counter: $(this).text(),
+            },
+            {
+              duration: 3300,
+              easing: "swing",
+              step: function (now) {
+                $(this).text(Math.ceil(now));
+              },
+            }
+          );
+      });
+    </script>
+    <!-- Add Mautic Script before closing body tag -->
+    <script type="text/javascript">
+      if (typeof MauticSDKLoaded == "undefined") {
+        var MauticSDKLoaded = true;
+        var head = document.getElementsByTagName("head")[0];
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src =
+          "https://subscribe.ashwin.org/media/js/mautic-form.js?v2fc87979";
+        script.onload = function () {
+          MauticSDK.onLoad();
+        };
+        head.appendChild(script);
+        var MauticDomain = "https://subscribe.ashwin.org/";
+        var MauticLang = {
+          submittingMessage: "Please wait...",
+        };
+      } else if (typeof MauticSDK != "undefined") {
+        MauticSDK.onLoad();
+      }
+    </script>
+  </body>
+
+  <!-- Mirrored from html.designingmedia.com/medwell/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 Jan 2025 05:40:17 GMT -->
+</html>
